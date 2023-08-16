@@ -1,0 +1,39 @@
+
+# ALL CHANGES MADE TO THIS FILE REQUIRES A SERVER RESTART TO TAKE EFFECT!
+# Teleportation Token Shaped Recipe
+#
+# This is how the items will be placed on the crafting table
+# 	-------------------------
+#   |   A   |   B   |   C   |
+#   -------------------------
+#   |   D   |   E   |   F   |
+#   -------------------------
+#   |   G   |   H   |   I   |
+#   -------------------------
+#
+TeleportationTokenRecipe:
+  A: COPPER_INGOT
+  B: DIAMOND
+  C: COPPER_INGOT
+  D: AMETHYST_SHARD
+  E: ENDER_PEARL
+  F: AMETHYST_SHARD
+  G: REDSTONE
+  H: QUARTZ
+  I: REDSTONE
+TokenCountInCrafting: 3
+#
+# Resource Pack. Change the link of the resource pack that you want to use.
+# Take note that the token will be using the item thas is specified in BaseMaterial.
+# Base Material is the minecraft item that the token will be using. So make sure that your
+# resource pack will be using the correct item
+#
+# For the resource pack hosting, it is best to use the drop box and upload the resource
+# folder (DO NOT ZIP IT). and copy paste the share link and change the last character of the link from 0 to 1
+BaseMaterial: COPPER_INGOT
+CustomModelData: 1 #Change this if you have our own Resource Pack and set that number here
+ResourcePackURL: https://www.dropbox.com/scl/fo/ctt7dle4egclda8ggjrjq/h?rlkey=u8ww0sc44y22tcwstdeyncdnu&dl=1
+#
+# This will give players free token the first time they eneter the server. 1 = give 0 = don't give
+GiveNewPlayerTokens: 1
+FreeTokenCount: 10

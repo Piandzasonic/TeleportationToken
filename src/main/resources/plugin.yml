@@ -1,0 +1,38 @@
+name: TeleportationToken
+version: '${project.version}'
+main: me.alzen.teleportationtokenplugin.TeleportationTokenPlugin
+api-version: '1.20'
+authors: [Alzen]
+description: Allow players to teleport with the use of craftable tokens.
+website: https://www.spigotmc.org/members/alzen.1861423/
+commands:
+  tpr:
+    description: Command to request to teleport to a player.
+    usage: Command Syntax is /tpr PlayerName
+  tpx:
+    description: Command to cancel the request you sent to a player.
+    usage: Command Syntax is /tpx PlayerName
+  tprlist:
+    description: Command to list all your sent teleport request.
+    usage: Command Syntax is /tprlist
+  tpalist:
+    description: Command to list all your received teleport requests.
+    usage: Command Syntax is /tpalist
+  tpa:
+    description: Command to accept teleportation request from a player.
+    usage: Command Syntax is /tpa RequestorPlayerName
+  tpq:
+    description: Command to reject teleportation request from a player.
+    usage: Command Syntax is /tpq RequestorPlayerName
+  tpsh:
+    description: Command to set the position the player is standing at as a home.
+    usage: Command Syntax is /tpsh HomeName
+  tprm:
+    description: Command to remove the saved home.
+    usage: Command Syntax is /tprm HomeName
+  tph:
+    description: Command to teleport to a saved home.
+    usage: Command Syntax is /tph HomeName
+  tphlist:
+    description: Command to list all saved homes.
+    usage: Command Syntax is /tphlist
