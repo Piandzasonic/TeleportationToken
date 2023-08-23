@@ -13,6 +13,8 @@ import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.ShapedRecipe;
 import org.bukkit.plugin.java.JavaPlugin;
 
+import org.bstats.bukkit.Metrics;
+
 import java.util.Objects;
 
 public final class TeleportationTokenPlugin extends JavaPlugin {
@@ -45,6 +47,9 @@ public final class TeleportationTokenPlugin extends JavaPlugin {
     @Override
     public void onEnable() {
         // Plugin startup logic
+        int pluginID = 19618;
+        Metrics metrics = new Metrics(this, pluginID);
+
         instance = this;
 
         getConfig().options().copyDefaults();
