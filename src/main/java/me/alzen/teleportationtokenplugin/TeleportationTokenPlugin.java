@@ -1,10 +1,10 @@
 package me.alzen.teleportationtokenplugin;
 
+import me.alzen.teleportationtokenplugin.bStats.Metrics;
 import me.alzen.teleportationtokenplugin.commands.*;
 import me.alzen.teleportationtokenplugin.eventlisteners.*;
 import me.alzen.teleportationtokenplugin.model.TeleportationToken;
 import me.alzen.teleportationtokenplugin.utils.YamlFileManager;
-import org.bstats.charts.DrilldownPie;
 import org.bukkit.Bukkit;
 import org.bukkit.Material;
 import org.bukkit.NamespacedKey;
@@ -13,8 +13,6 @@ import org.bukkit.event.HandlerList;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.ShapedRecipe;
 import org.bukkit.plugin.java.JavaPlugin;
-
-import org.bstats.bukkit.Metrics;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -52,25 +50,6 @@ public final class TeleportationTokenPlugin extends JavaPlugin {
         // Plugin startup logic
         int pluginID = 19618;
         Metrics metrics = new Metrics(this, pluginID);
-
-        metrics.addCustomChart(new DrilldownPie("minecraft_version", () -> {
-            Map<String, Map<String, Integer>> map = new HashMap<>();
-            String minecraftVersion = getServer().getBukkitVersion();
-            Map<String, Integer> entry = new HashMap<>();
-            entry.put(minecraftVersion, 1);
-            if (minecraftVersion.contains("1.17")) {
-                map.put("Minecraft 1.17", entry);
-            } else if (minecraftVersion.contains("1.18")) {
-                map.put("Minecraft 1.18", entry);
-            } else if (minecraftVersion.contains("1.19")) {
-                map.put("Minecraft 1.19", entry);
-            } else if (minecraftVersion.contains("1.20")){
-                map.put("Minecraft 1.20", entry);
-            }else{
-                map.put("Other", entry);
-            }
-            return map;
-        }));
 
         instance = this;
 
