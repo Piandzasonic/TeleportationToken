@@ -38,11 +38,8 @@ public class PlayerJoinListener implements Listener {
                 player.sendMessage(ChatColor.GREEN + "Unable to give you Teleportation Token. Please free up a slot in your inventory and rejoin.");
             }
         }
-
-        if(pluginInstance.getConfig().getInt("EnableResourcePack") == 1) {
-            String url = pluginInstance.getConfig().getString("ResourcePackURL");
-            player.setResourcePack(Objects.requireNonNull(url));
-        }
+        String url = pluginInstance.getConfig().getString("ResourcePackURL");
+        player.setResourcePack(Objects.requireNonNull(url));
     }
 
     private void GiveTokenToPlayer(Player player) {

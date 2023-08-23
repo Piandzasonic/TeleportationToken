@@ -1,7 +1,7 @@
 name: TeleportationToken
 version: '${project.version}'
 main: me.alzen.teleportationtokenplugin.TeleportationTokenPlugin
-api-version: '1.16'
+api-version: '1.20'
 authors: [Alzen]
 description: Allow players to teleport with the use of craftable tokens.
 website: https://www.spigotmc.org/members/alzen.1861423/
