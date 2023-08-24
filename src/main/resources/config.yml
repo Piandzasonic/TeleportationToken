@@ -1,33 +1,36 @@
-
 # ALL CHANGES MADE TO THIS FILE REQUIRES A SERVER RESTART TO TAKE EFFECT!
 # Teleportation Token Shaped Recipe
 #
 # This is how the items will be placed on the crafting table
-# 	-------------------------
-#   |   A   |   B   |   C   |
-#   -------------------------
-#   |   D   |   E   |   F   |
-#   -------------------------
-#   |   G   |   H   |   I   |
-#   -------------------------
+# -------------------------
+# | A | B | C |
+# -------------------------
+# | D | E | F |
+# -------------------------
+# | G | H | I |
+# -------------------------
 #
 TeleportationTokenRecipe:
-  A: COPPER_INGOT
-  B: DIAMOND
-  C: COPPER_INGOT
-  D: AMETHYST_SHARD
-  E: ENDER_PEARL
-  F: AMETHYST_SHARD
-  G: REDSTONE
-  H: QUARTZ
-  I: REDSTONE
+A: COPPER_INGOT
+B: DIAMOND
+C: COPPER_INGOT
+D: AMETHYST_SHARD
+E: ENDER_PEARL
+F: AMETHYST_SHARD
+G: REDSTONE
+H: QUARTZ
+I: REDSTONE
 TokenCountInCrafting: 3
-#
+
 # Resource Pack. Change the link of the resource pack that you want to use.
 # Take note that the token will be using the item thas is specified in BaseMaterial.
 # Base Material is the minecraft item that the token will be using. So make sure that your
 # resource pack will be using the correct item
-#
+
+# Setting this to 1 will use this plugin as the only server resource pack. If your server has its own resource pack, set EnableResourcePack to 0 and locally install
+# the resource pack to the client
+EnableResourcePack: 1
+
 # For the resource pack hosting, it is best to use the drop box and upload the resource
 # folder (DO NOT ZIP IT). and copy paste the share link and change the last character of the link from 0 to 1
 BaseMaterial: COPPER_INGOT
