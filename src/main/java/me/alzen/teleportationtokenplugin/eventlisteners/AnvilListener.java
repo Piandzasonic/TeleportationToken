@@ -11,10 +11,13 @@ public class AnvilListener implements Listener {
     @EventHandler
     public void onAnvilRename(PrepareAnvilEvent event) {
         String newName = event.getInventory().getRenameText();
-        if(Objects.requireNonNull(newName).equalsIgnoreCase("Teleportation Token")) {
-            event.setResult(null);
-            event.getInventory().setRepairCost(0);
+        if(newName != null){
+            if(Objects.requireNonNull(newName).equalsIgnoreCase("Teleportation Token")) {
+                event.setResult(null);
+                event.getInventory().setRepairCost(0);
+            }
         }
+
     }
 
 }

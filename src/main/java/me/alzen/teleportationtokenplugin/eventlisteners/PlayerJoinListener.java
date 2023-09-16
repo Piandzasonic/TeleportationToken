@@ -5,6 +5,7 @@ import me.alzen.teleportationtokenplugin.TeleportationTokenPlugin;
 import me.alzen.teleportationtokenplugin.utils.YamlFileManager;
 import org.bukkit.ChatColor;
 import org.bukkit.Material;
+import org.bukkit.NamespacedKey;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
@@ -55,6 +56,8 @@ public class PlayerJoinListener implements Listener {
 
             player.sendMessage(ChatColor.GREEN + "You received " + freeTokenCount + " Teleportation Tokens.");
         }
+
+        player.discoverRecipe(new NamespacedKey(pluginInstance, "tptoken"));
 
     }
 
